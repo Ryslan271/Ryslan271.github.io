@@ -44,8 +44,8 @@ window.onload = function () {
 }
 
 window.onscroll = function () {
-    $(document).scroll(function() {
-        var st = $(this).scrollTop();
+    window.addEventListener('scroll', function(e) {
+        var st = window.scrollY;
         if(st > 0) {
             $(".header").css({
                 "background": "rgb(201, 201, 201)",
