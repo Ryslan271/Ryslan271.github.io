@@ -7,34 +7,40 @@
     <link rel="stylesheet" type="text/css" href="css/adaptability.css">
     <link rel="stylesheet" type="text/css" href="css/css.css">
     <script src="js/js.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <title>DarkSouls</title>
 </head>
 <body>
     <header class="header">
         <nav class="nav_1">
             <ul class="topmenu">
-                <li><a class="passiv" href="" class="submenu-link">Боссы</a>
+                <li><a class="passiv boss" class="submenu-link">Боссы</a>
                     <ul class="submenu">
-                        <li><a href="">Все боссы</a></li>
-                        <li><a href="">Танцовщица Холодной долины</a></li>
-                        <li><a href="">Душа пепла</a></li>
+                        <li><a href="allboss.html">Все боссы</a></li>
+                        <li><a href="boss_1.html">Танцовщица Холодной долины</a></li>
+                        <li><a href="boss_2.html">Душа пепла</a></li>
                     </ul>
                 </li>
-                <li><a class="active" href="">Главная</a></li>
-                <li><a class="passiv" href="">Контакты</a></li>
+                <li><a class="active" href="index.html">Главная</a></li>
+                <li><a class="passiv" href="Contact.html">Контакты</a></li>
             </ul>
         </nav>
         
         <div class="head">
-            <ul>
+            <ul class="open">
                 <li><a type="open" id="open"><svg style="width: 7vw;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"><g class=""><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></g></svg></a></li>
             </ul>
             <nav class="nav_2">
-                <ul>
-                    <li><a type="exit" id="exit"><svg style="width: 7vw;" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"><g class=""><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></g></svg></a></li>
+                <ul class="exit">
+                    <li><a type="exit" id="exit"><div class="arrow_example_1"></div></a></li>
                 </ul>
-                <p>asdasd</p>
+                <ul class="ul_phone_menu">
+                    <li><a class="passiv_phone" href="allboss.html">Все боссы</a></li>
+                    <li><a class="passiv_phone" href="boss_1.html">Танцовщица Холодной долины</a></li>
+                    <li><a class="passiv_phone" href="boss_2.html">Душа пепла</a></li>
+                    <li><a class="active_phone" href="index.html">Главная</a></li>
+                    <li><a class="passiv_phone" href="Contact.html">Контакты</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -86,7 +92,7 @@
                 </div>
                 <div style="border-left: 3px solid #989292;"></div>
                 <div style="padding: 0 2vw 0 2vw;">
-                    <h3>Рекамендованные :</h3>
+                    <h3>Рекомендованные :</h3>
                     <p>
                         ОС: Windows 7 SP1 64bit, Windows 8.1 64bit Windows 10 64bit
                         <br>
@@ -119,9 +125,10 @@
                         <br>
                         Российская игровая пресса также хорошо встретила игру, поставив ей 90 из 100 на основе 26 рецензий. Журналисты отмечают мрачность мира и напряженность игрового процесса, а также высокий уровень сложности.</p>
                 </div>
-                <img src="img/main_text_2.jpg" alt="">
+                <a href="#" class="scrollup">Наверх</a>
             </div>
         </div>
+        <div id="toTop">^</div>
     </div>
     <footer>
         <img src="img/logo.jpg" alt="">
