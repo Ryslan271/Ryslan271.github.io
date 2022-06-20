@@ -1,10 +1,12 @@
+@import url(keyframes.css);
+
 * {box-sizing: border-box;}
 @font-face {
 	font-family: 'FontName';
     src: url(../font/JejuHallasan-Regular.ttf); 
 }
 body {
-    font-size: calc(0.8rem + 6 * (100vw - 320px) / 880);
+    font-size: calc(0.6rem + 6 * (100vw - 320px) / 880);
     margin: 0;
     background: #292929;
     font-family: 'FontName'; 
@@ -16,6 +18,9 @@ body {
     z-index: 100;
     background: white;
     text-align: center;
+    transition: 1s;
+    animation: head 2s 1;
+    animation-fill-mode: forwards;  
 }
 header a {
     text-shadow: 5px 4px 4px rgba(250, 255, 18, 0.25);
@@ -69,11 +74,10 @@ header a {
     width: 180px;
     opacity: 0;
     transform: scaleY(0);
-    transform-origin :0 0;
+    transform-origin : 0 0;
     transition: .5s ease-in-out;
 }
 .submenu a {
-    color: white;
     text-align: left;
     padding: 12px 15px;
     font-size: 13px;
@@ -81,8 +85,18 @@ header a {
 }
 .submenu li:last-child a {border-bottom: none;}
 .topmenu > li:hover .submenu {
-    opacity: 0.9;
+    opacity: 0.95;
     transform: scaleY(1);
+}
+
+.topmenu > li:hover .triangle-down {
+    animation: ani 1.5s forwards;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 12px solid #000000;
+    border-top: 0;
 }
 
 .img_main {
@@ -100,29 +114,25 @@ header a {
     text-align: center;
     color: white;
     border-bottom: 5px solid #000000;
-    font-size: calc(0.5rem + 6 * (100vw - 320px) / 880);
+    font-size: calc(0.6rem + 6 * (100vw - 320px) / 880);
 }
 
 .main_text {
     color: rgb(219, 219, 219);
     font-style: normal;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 30px;
 }
 
 .main_text p {
     font-size: calc(0.8rem + 6 * (100vw - 320px) / 880);
 }
-
-.main_h {
-    font-size: calc(0.8rem + 6 * (100vw - 320px) / 880);
-}
-
 .main_text_block {
     padding: 0 5vw 2vh 5vw;
     border-bottom: 5px solid #000000;
     margin-top: 2vh;
     display: flex;
+    letter-spacing: 0.3px;
 }
 
 .main_text_block h1 {
@@ -227,19 +237,17 @@ footer img {
     margin: 0 2vw 2vw 2vw;
 }
 
-.ul_phone_menu {
+.ul_phone_menu a {
     margin-top: 45%;
     text-align: center;
 }
 
-.active_phone {
-    box-shadow: 0.1em 0.1em 1vw rgba(223, 60, 60, 0.5);
-    color: rgb(194, 159, 159);
+.active_phone a {
+    color: rgb(240, 185, 185);
 }
 
-.passiv_phone {
-    box-shadow: 0.1em 0.1em 1vw rgba(219, 219, 219, 0.5);
-    color: rgb(219, 219, 219);
+.passiv_phone a {
+    color: rgb(255, 255, 255);
 }
 
 .boss_ul {
@@ -281,10 +289,47 @@ footer img {
     border-radius: 2vw;
 }
 
+.main_text_block_contact img:link {
+    box-shadow: 0 0 1vw 0.5vw red;
+    border-radius: 2vw;
+}
+
 .main_text_block_contact img {
     transition: 0.5s;
 }
 
 .boss {
     pointer-events: none;
+}
+
+.contact_text {
+    margin: 0 5vw 0 5vw;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #292929;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 2px solid rgb(182, 48, 7);
+}
+
+.triangle-down { 
+    animation: ani_exit 1.5s forwards;
+    transition: .6s;
+    margin-top: 14%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 12px solid #000000;
+}   
+
+.li_allboss {
+    display: flex;
 }

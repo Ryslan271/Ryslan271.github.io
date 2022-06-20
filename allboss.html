@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
     <link rel="stylesheet" type="text/css" href="css/adaptability.css">
     <link rel="stylesheet" type="text/css" href="css/css.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <script src="js/js.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <title>DarkSouls</title>
@@ -15,11 +15,13 @@
     <header class="header">
         <nav class="nav_1">
             <ul class="topmenu">
-                <li><a class="active boss" class="submenu-link">Боссы</a>
+                <li class="li_allboss">
+                    <div class="triangle-down"></div>
+                    <a style="padding: 15px 30px 15px 10px;"  class="active boss" class="submenu-link">Боссы</a>
                     <ul class="submenu">
-                        <li><a href="allboss.html">Все боссы</a></li>
-                        <li><a href="boss_1.html">Танцовщица Холодной долины</a></li>
-                        <li><a href="boss_2.html">Душа пепла</a></li>
+                        <li class="active_phone"><a href="allboss.html">Все боссы</a></li>
+                        <li class="passiv_phone"><a href="boss_1.html">Танцовщица Холодной долины</a></li>
+                        <li class="passiv_phone"><a href="boss_2.html">Душа пепла</a></li>
                     </ul>
                 </li>
                 <li><a class="passiv" href="index.html">Главная</a></li>
@@ -91,8 +93,8 @@
         <div class="main_h">
             <h1>Примечания</h1>
         </div>
-        <div class="main_text" style="border-bottom: 0;">
-            <div class="main_text_block">
+        <div class="main_text">
+            <div class="main_text_block" style="border-bottom: 0;">
                 <div>
                     <h2>Сюжет</h2>
                     <p>
@@ -110,7 +112,6 @@
             </div>
         </div>
         <a href="#" class="scrollup">Наверх</a>
-        <div id="toTop">^</div>
     </div>
     <footer>
         <img src="img/logo.jpg" alt="">
