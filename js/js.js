@@ -43,23 +43,25 @@ window.onload = function () {
         });
 }
 
+f = function(e) {
+    var st = window.scrollY;
+    if(st > 0) {
+        $(".header").css({
+            "background": "rgb(201, 201, 201)",
+            "transition": ".9s",
+            "margin-top": "-0.5vh",
+            "position": "fixed"
+        })
+    } else {
+        $(".header").css({
+            "background": "white",
+            "transition": ".9s",
+            "margin-top": "0",
+            "position": "relative"
+        })
+    }
+};
+
 window.onscroll = function () {
-    window.addEventListener('scroll', function(e) {
-        var st = window.scrollY;
-        if(st > 0) {
-            $(".header").css({
-                "background": "rgb(201, 201, 201)",
-                "transition": ".9s",
-                "margin-top": "-0.5vh",
-                "position": "fixed"
-            })
-        } else {
-            $(".header").css({
-                "background": "white",
-                "transition": ".9s",
-                "margin-top": "0",
-                "position": "relative"
-            })
-        }
-    });
+    window.addEventListener('scroll', f);
 };
